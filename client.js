@@ -3,6 +3,7 @@ const port = 8124;
 
 let QA;
 let curQA = 0;
+let ans;
 const client = new net.Socket();
 
 client.setEncoding('utf8');
@@ -29,8 +30,15 @@ client.on('data', function(data) {
     }
     else{
         if(data==='DEC'){
-            client.destroy();}
-            else{}
+            client.destroy();
+        }
+            else
+                {
+            ans = parseInt(data);
+            console.log("Quastion - " + QA[curQA - 1].qs + " server answer " + QA[curQA - 1].ans[ans]);
+            console.log("Good answer " + QA[curQA - 1].ans[0]);
+            sendQA();
+        }
     }
 });
 
