@@ -1,9 +1,9 @@
 const childProcess = require('child_process').exec;
-const fs = require("fs");
 const COUNT = process.argv[2];
+const Word = process.argv[3];
 
 for (let i = 0; i < COUNT; i++) {
-    childProcess('node client.js', (err, sout, serr) => {
+    childProcess(`node client.js ${Word}`, (err, sout) => {
         if (err) {
             console.error(err);
             return;
