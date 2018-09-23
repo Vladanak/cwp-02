@@ -1,0 +1,9 @@
+Connected new client: ID - 1
+New QA - MMM ?
+Server answer - 1
+New QA - Where are you from ?
+Server answer - 1
+New QA - What is your name ?
+Server answer - 0
+New QA - How old are you ?
+Server answer - 0
